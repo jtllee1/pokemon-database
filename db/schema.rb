@@ -10,10 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_01_124140) do
+ActiveRecord::Schema.define(version: 2020_05_04_182713) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "moves", force: :cascade do |t|
+    t.string "name"
+    t.string "damage_class"
+    t.integer "accuracy"
+    t.integer "power"
+    t.integer "pp"
+    t.integer "priority"
+    t.integer "effect_chance"
+    t.integer "stat_change"
+    t.string "stat_name"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "pokemon_moves", force: :cascade do |t|
+    t.bigint "pokemon_id", null: false
+    t.bigint "move_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["move_id"], name: "index_pokemon_moves_on_move_id"
+    t.index ["pokemon_id"], name: "index_pokemon_moves_on_pokemon_id"
+  end
+
+  create_table "pokemons", force: :cascade do |t|
+    t.string "name"
+    t.integer "number"
+    t.string "sprite_back"
+    t.string "sprite_front"
+    t.string "image"
+    t.integer "spd"
+    t.integer "sp_def"
+    t.integer "sp_atk"
+    t.integer "def"
+    t.integer "atk"
+    t.integer "hp"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +67,6 @@ ActiveRecord::Schema.define(version: 2020_05_01_124140) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "pokemon_moves", "moves"
+  add_foreign_key "pokemon_moves", "pokemons"
 end
