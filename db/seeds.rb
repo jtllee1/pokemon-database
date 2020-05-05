@@ -1,6 +1,10 @@
 require 'net/http'
 require 'json'
 
+PokemonMove.destroy_all
+Move.destroy_all
+Pokemon.destroy_all
+
 url = 'https://pokeapi.co/api/v2/move?limit=165'
 uri = URI(url)
 
@@ -25,7 +29,11 @@ end
   puts @pp = @move['pp']
   puts @priority = @move['priority']
   puts @effect_chance = @move['effect_chance']
-  puts @description = @move['effect_entries'][0]['short_effect'].gsub!('$effect_chance', "#{@effect_chance}")
+  puts @description = @move['effect_entries'][0]['short_effect']
+
+  if @description.include?("$effect_chance")
+    puts @description = @description.gsub!('$effect_chance', "#{@effect_chance}")
+  end
 
   @stat_changes = @move['stat_changes']
 
@@ -47,6 +55,8 @@ end
     stat_name: @stat
     )
   @new_move.save!
+
+  sleep(0.5)
 end
 
 url = 'https://pokeapi.co/api/v2/pokemon?limit=151'
@@ -89,6 +99,8 @@ end
   @new_pokemon = Pokemon.new(
     name: @name,
     number: @number,
+    type_1: @type_1,
+    type_2: @type_2,
     sprite_back: @sprite_back,
     sprite_front: @sprite_front,
     image: @image,
@@ -113,4 +125,5 @@ end
       @new_pokemon_move.save!
     end
   end
+  sleep(0.5)
 end
