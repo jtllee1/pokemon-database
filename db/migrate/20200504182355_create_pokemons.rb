@@ -3,6 +3,8 @@ class CreatePokemons < ActiveRecord::Migration[6.0]
     create_table :pokemons do |t|
       t.string :name
       t.integer :number
+      t.string :type_1
+      t.string :type_2
       t.string :sprite_back
       t.string :sprite_front
       t.string :image
