@@ -1,8 +1,12 @@
-<% @moves.each do |move| %>
-  <h5><%= move.name %></h5>
-  <p>Damage Class: <%= move.damage_class %></p>
-  <p>Power: <%= move.power %></p>
-  <p>Accuracy: <%= move.accuracy %></p>
-  <p>PP: <%= move.pp %></p>
-  <p>Effect: <%= move.description %></p>
-<% end %>
+<div class="container">
+  <% @moves.each do |move| %>
+    <div class="container">
+      <h5><%= move.name %></h5>
+      <p>Damage Class: <%= move.damage_class %></p>
+      <p>Power: <%= move.power %></p>
+      <p>Accuracy: <%= move.accuracy %></p>
+      <p>PP: <%= move.pp %></p>
+      <p>Effect: <%= move.description %></p>
+    </div>
+  <% end %>
+</div>

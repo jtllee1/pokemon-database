@@ -1,7 +1,3 @@
-<!-- <div id="poke-container"></div> -->
-<%= link_to "Moves", moves_path %>
-<%= link_to "Pokedex", pokemons_path %>
-
 <div id="pokemon-container">
   <% @pokemons.each do |pokemon| %>
     <div>
@@ -13,7 +9,9 @@
           <li><%= pokemon.type_2 %></li>
         <% end %>
       </ul>
-      <img src="<%= pokemon.image %>" alt="Pokemon Image">
+      <%= link_to pokemon_path(pokemon) do %>
+        <img src="<%= pokemon.image %>" alt="Pokemon Image">
+      <% end %>
     </div>
   <% end %>
 </div>
