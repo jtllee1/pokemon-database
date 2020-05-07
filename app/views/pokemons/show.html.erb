@@ -9,7 +9,7 @@
   </ul>
 </div>
 
-<div class="screen-bezel gray">
+<!-- <div class="screen-bezel gray">
   <div class="screen-top">
     <div class="circle orange"></div>
     <div class="circle orange"></div>
@@ -17,14 +17,21 @@
   <div class="screen white">
     <img src="<%= @pokemon.image %>" alt="Pokemon Image">
   </div>
-</div>
+</div> -->
 
-<div class="control">
-  <div class="up dark-gray"></div>
-  <div class="center dark-gray">
-    <div class="left"></div>
-    <div class="middle shade-gray"></div>
-    <div class="right"></div>
+
+<div class="pokedex">
+  <div class="screen">
+    <h5>#<%= @pokemon.number %> <%= @pokemon.name %></h5>
+    <img src="<%= @pokemon.image %>" alt="Pokemon Image">
   </div>
-  <div class="down dark-gray"></div>
+  <div class="red-button"></div>
+  <div class="circle-button"></div>
+  <div class="pokedex-overlay"></div>
+  <div class="up"></div>
+  <div class="left"></div>
+  <div class="right"></div>
+  <div class="down"></div>
+  <div class="pokedex-overlay"></div>
+  </div>
 </div>
