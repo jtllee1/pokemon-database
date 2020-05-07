@@ -2,18 +2,3 @@
 <%= link_to "Moves", moves_path %>
 <%= link_to "Pokedex", pokemons_path %>
 
-<div id="pokemon-container">
-  <% @pokemons.each do |pokemon| %>
-    <div>
-      <h4><%= pokemon.name %></h4>
-      <p>#<%= pokemon.number %></p>
-      <ul>
-        <li><%= pokemon.type_1 %></li>
-        <% if pokemon.type_2 %>
-          <li><%= pokemon.type_2 %></li>
-        <% end %>
-      </ul>
-      <img src="<%= pokemon.image %>" alt="Pokemon Image">
-    </div>
-  <% end %>
-</div>
