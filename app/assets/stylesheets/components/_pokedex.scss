@@ -1,8 +1,14 @@
 .pokedex {
-  background-size: 978px 678px;
+  background-image: url(pokedex-neutral.png);
   width: 978px;
   height: 678px;
   position: relative;
+  .pokedex-overlay {
+    position: absolute;
+    background-image: url(pokedex-neutral.png);
+    width: 978px;
+    height: 678px;
+  }
   .screen {
     position: absolute;
     top: 239px;
@@ -94,11 +100,4 @@
 
 .down:hover ~ .pokedex-overlay {
   background-image: url(pokedex-downpressed.png);
-}
-
-.pokedex-overlay {
-  position: absolute;
-  background-image: url(pokedex-neutral.png);
-  width: 978px;
-  height: 678px;
 }
