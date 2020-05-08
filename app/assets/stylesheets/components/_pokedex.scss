@@ -3,101 +3,116 @@
   width: 978px;
   height: 678px;
   position: relative;
-  .pokedex-overlay {
-    position: absolute;
-    background-image: url(pokedex-neutral.png);
-    width: 978px;
-    height: 678px;
+}
+
+.pokedex-overlay {
+  position: absolute;
+  width: 978px;
+  height: 678px;
+}
+
+.screen {
+  position: absolute;
+  top: 239px;
+  left: 102px;
+  border-radius: 11px;
+  width: 282px;
+  height: 188px;
+  padding: 8px;
+  z-index: 1;
+  h5 {
+    margin: 0;
   }
-  .screen {
-    position: absolute;
-    top: 239px;
-    left: 102px;
-    border-radius: 11px;
-    width: 282px;
-    height: 188px;
-    padding: 8px;
-    z-index: 1;
-    h5 {
-      margin: 0;
-    }
-    img {
-      width: 152px;
-      height: 152px;
-    }
-  }
-  .red-button {
-    position: absolute;
-    bottom: 215px;
-    left: 113px;
-    width: 27px;
-    height: 27px;
-    border-radius: 50%;
-    z-index: 1;
-  }
-  .circle-button {
-    position: absolute;
-    bottom: 132px;
-    left: 48px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    z-index: 1;
-  }
-  .up {
-    position: absolute;
-    bottom: 124px;
-    left: 350px;
-    width: 40px;
-    height: 40px;
-    z-index: 1;
-  }
-  .left {
-    position: absolute;
-    bottom: 86px;
-    left: 310px;
-    width: 40px;
-    height: 40px;
-    z-index: 1;
-  }
-  .right {
-    position: absolute;
-    bottom: 86px;
-    left: 388px;
-    width: 40px;
-    height: 40px;
-    z-index: 1;
-  }
-  .down {
-    position: absolute;
-    bottom: 47px;
-    left: 350px;
-    width: 40px;
-    height: 40px;
-    z-index: 1;
+  img {
+    width: 152px;
+    height: 152px;
   }
 }
 
-.circle-button:hover ~ .pokedex-overlay {
+.red-button {
+  position: absolute;
+  bottom: 215px;
+  left: 113px;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.circle-button {
+  position: absolute;
+  bottom: 132px;
+  left: 48px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.up {
+  position: absolute;
+  bottom: 124px;
+  left: 350px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.left {
+  position: absolute;
+  bottom: 86px;
+  left: 310px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.right {
+  position: absolute;
+  bottom: 86px;
+  left: 388px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.down {
+  position: absolute;
+  bottom: 47px;
+  left: 350px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.circle-button:active ~ .pokedex-overlay {
   background-image: url(pokedex-circlepressed.png);
 }
 
-.red-button:hover ~ .pokedex-overlay {
+.red-button:active ~ .pokedex-overlay {
   background-image: url(pokedex-redpressed.png);
 }
 
-.up:hover ~ .pokedex-overlay {
+.up:active ~ .pokedex-overlay {
   background-image: url(pokedex-uppressed.png);
 }
 
-.left:hover ~ .pokedex-overlay {
+.left:active ~ .pokedex-overlay {
   background-image: url(pokedex-leftpressed.png);
 }
 
-.right:hover ~ .pokedex-overlay {
+.right:active ~ .pokedex-overlay {
   background-image: url(pokedex-rightpressed.png);
 }
 
-.down:hover ~ .pokedex-overlay {
+.down:active ~ .pokedex-overlay {
   background-image: url(pokedex-downpressed.png);
+}
+
+.carousel-control-prev {
+  width: 40px;
+}
+
+.carousel-control-next {
+  width: 40px;
 }
