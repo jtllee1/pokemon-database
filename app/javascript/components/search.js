@@ -4,7 +4,7 @@ const search = () => {
   const search = document.getElementById("search");
   const button = document.getElementById("circle-button");
   const redButton = document.getElementById("red-button");
-  const pokemons = document.querySelectorAll(".carousel-item")
+  const pokemons = document.querySelectorAll(".carousel-item");
 
   button.addEventListener('click', () => {
     if (search.value !== "") {
@@ -25,7 +25,9 @@ const search = () => {
   });
 
   redButton.addEventListener('click', () => {
-    search.value = ""
+    search.value = "";
+    pokemons.forEach(pokemon => pokemon.classList.remove("active"));
+    pokemons[0].classList.add("active");
   });
 }
 
