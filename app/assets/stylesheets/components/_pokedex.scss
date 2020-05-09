@@ -13,8 +13,8 @@
 
 #search {
   position: absolute;
-  top: 214px;
-  right: 106px;
+  top: 226px;
+  right: 94px;
   z-index: 1;
   width: 300px;
   background: none;
@@ -23,6 +23,24 @@
 
 #search:focus {
   outline: none;
+}
+
+#instructions {
+  position: absolute;
+  top: 262px;
+  right: 54px;
+  z-index: 1;
+  p {
+    color: rgba(80, 80, 200, 1.0);
+    font-size: 14px;
+    margin: 0;
+    a {
+      color: red;
+    }
+    b {
+      color: black;
+    }
+  }
 }
 
 #screen {
