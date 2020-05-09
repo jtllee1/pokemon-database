@@ -4,11 +4,31 @@
       <div class="carousel-inner">
         <% @pokemons.each_with_index do |pokemon, n| %>
           <div class="carousel-item <%= n == 0 ? "active" : "" %>">
-            <h5>#<%= pokemon.number %> <%= pokemon.name %></h5>
-            <%= link_to pokemon_path(pokemon) do %>
-              <img src="<%= pokemon.image %>" class="image-1" alt="Pokemon Image">
-              <img src="<%= pokemon.sprite_front %>" class ="image-2 invisible" alt="Pokemon Image">
-            <% end %>
+            <div class="dex-entry">
+              <div class="screen-left">
+                <h5>#<%= pokemon.number %> <%= pokemon.name %></h5>
+                <%= link_to pokemon_path(pokemon) do %>
+                  <img src="<%= pokemon.image %>" class="image-1" alt="Pokemon Image">
+                  <img src="<%= pokemon.sprite_front %>" class ="image-2 invisible" alt="Pokemon Image">
+                <% end %>
+              </div>
+              <div class="screen-right">
+                <div class="typing">
+                  <div class="type <%= pokemon.type_1 %>"><%= pokemon.type_1 %></div>
+                  <% if pokemon.type_2 %>
+                    <div class="type <%= pokemon.type_2 %>"><%= pokemon.type_2 %></div>
+                  <% end %>
+                </div>
+                <div class="stat">
+                  <p>HP: <%= pokemon.hp %></p>
+                  <p>Attack: <%= pokemon.atk %></p>
+                  <p>Defense: <%= pokemon.def %></p>
+                  <p>Sp. Atk: <%= pokemon.sp_atk %></p>
+                  <p>Sp. Def: <%= pokemon.sp_def %></p>
+                  <p>Speed: <%= pokemon.spd %></p>
+                </div>
+              </div>
+            </div>
           </div>
         <% end %>
       </div>
