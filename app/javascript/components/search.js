@@ -7,7 +7,7 @@ const search = () => {
 
   button.addEventListener('click', () => {
     const input = capitalize(search.value);
-    const pokemon = document.getElementById(input);
+    const pokemon = document.getElementsByClassName(input)[0];
     pokemons.forEach(pokemon => pokemon.classList.remove("active"));
     pokemon.classList.add("active");
   });
@@ -15,7 +15,7 @@ const search = () => {
   document.addEventListener('keyup', (e) => {
     if (e.keyCode === 13 ) {
       const input = capitalize(search.value);
-      const pokemon = document.getElementById(input);
+      const pokemon = document.getElementsByClassName(input)[0];
       pokemons.forEach(pokemon => pokemon.classList.remove("active"));
       pokemon.classList.add("active");
     }
