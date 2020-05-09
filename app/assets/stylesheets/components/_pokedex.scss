@@ -20,12 +20,31 @@
   height: 188px;
   padding: 8px;
   z-index: 1;
-  h5 {
-    margin: 0;
-  }
-  img {
-    width: 152px;
-    height: 152px;
+  .dex-entry {
+    display: flex;
+    .screen-left {
+      h5 {
+        margin: 0;
+      }
+      img {
+        width: 152px;
+        height: 152px;
+      }
+    }
+    .screen-right {
+      .stat {
+        border: 1px solid #64646429;
+        border-radius: 4px;
+        background: rgba(230, 245, 245, 1.0);
+        margin: 4px;
+        width: 102px;
+        padding: 6px;
+        p {
+          font-size: 14px;
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }
 
