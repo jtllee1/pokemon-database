@@ -4,7 +4,7 @@
     <div id="carouselControls" class="carousel slide" data-interval="false">
       <div class="carousel-inner">
         <% @pokemons.each_with_index do |pokemon, n| %>
-          <div class="carousel-item <%= n == 0 ? "active" : "" %>" id="<%= pokemon.name %>">
+          <div class="carousel-item <%= n == 0 ? "active" : "" %> <%= pokemon.name %> <%= pokemon.number %>">
             <div class="dex-entry">
               <div class="screen-left">
                 <h5>#<%= pokemon.number %> <%= pokemon.name %></h5>
