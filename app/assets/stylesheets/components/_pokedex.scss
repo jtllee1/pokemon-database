@@ -11,6 +11,20 @@
   height: 678px;
 }
 
+#search {
+  position: absolute;
+  top: 214px;
+  right: 106px;
+  z-index: 1;
+  width: 300px;
+  background: none;
+  border-style: none;
+}
+
+#search:focus {
+  outline: none;
+}
+
 #screen {
   position: absolute;
   top: 239px;
