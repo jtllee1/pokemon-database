@@ -3,23 +3,13 @@
     <div id="carouselControls" class="carousel slide" data-interval="false">
       <div class="carousel-inner">
         <% @pokemons.each_with_index do |pokemon, n| %>
-          <% if n == 0 %>
-            <div class="carousel-item active">
-              <h5>#<%= pokemon.number %> <%= pokemon.name %></h5>
-              <%= link_to pokemon_path(pokemon) do %>
-                <img src="<%= pokemon.image %>" class="image-1" alt="Pokemon Image">
-                <img src="<%= pokemon.sprite_front %>" class ="image-2 invisible" alt="Pokemon Image">
-              <% end %>
-            </div>
-          <% else %>
-            <div class="carousel-item">
-              <h5>#<%= pokemon.number %> <%= pokemon.name %></h5>
-              <%= link_to pokemon_path(pokemon) do %>
-                <img src="<%= pokemon.image %>" class="image-1" alt="Pokemon Image">
-                <img src="<%= pokemon.sprite_front %>" class ="image-2 invisible" alt="Pokemon Image">
-              <% end %>
-            </div>
-          <% end %>
+          <div class="carousel-item <%= n == 0 ? "active" : "" %>">
+            <h5>#<%= pokemon.number %> <%= pokemon.name %></h5>
+            <%= link_to pokemon_path(pokemon) do %>
+              <img src="<%= pokemon.image %>" class="image-1" alt="Pokemon Image">
+              <img src="<%= pokemon.sprite_front %>" class ="image-2 invisible" alt="Pokemon Image">
+            <% end %>
+          </div>
         <% end %>
       </div>
     </div>
