@@ -1,5 +1,38 @@
+#pokedex-closed {
+  background-image: url(pokedex-closed.png);
+  margin: 0 auto;
+  margin-top: 32px;
+  width: 978px;
+  height: 678px;
+}
+
+#selectable-area-open {
+  margin-top: 32px;
+  width: 528px;
+  height: 678px;
+}
+
+#selectable-area-close {
+  position: absolute;
+  top: 90px;
+  right: 0px;
+  width: 450px;
+  height: 96px;
+  z-index: 1;
+}
+
+#selectable-area-close {
+  cursor: pointer;
+}
+
+#selectable-area-open:hover {
+  cursor: pointer;
+}
+
 #pokedex {
   background-image: url(pokedex-neutral.png);
+  margin: 0 auto;
+  margin-top: 32px;
   width: 978px;
   height: 678px;
   position: relative;
