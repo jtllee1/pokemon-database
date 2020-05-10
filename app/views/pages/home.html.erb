@@ -1,4 +1,64 @@
-<!-- <div id="poke-container"></div> -->
-<%= link_to "Moves", moves_path %>
-<%= link_to "Pokedex", pokemons_path %>
+<div id="pokedex-closed">
+  <div id="selectable-area-open"></div>
+</div>
 
+<div id="pokedex" class="invisible">
+  <div id="selectable-area-close"></div>
+  <input type="text" id="search" placeholder="Search by Pokémon name or number.">
+  <div id="instructions">
+    <p>Press the <b style="color: red;">red</b> button to reset Pokédex.</p>
+    <p>Press enter or the <b style="color: black;">black</b> button to submit search.</p>
+  </div>
+  <div id="screen">
+    <div id="carouselControls" class="carousel slide" data-interval="false">
+      <div class="carousel-inner">
+        <% @pokemons.each_with_index do |pokemon, n| %>
+          <div class="carousel-item <%= n == 0 ? "active" : "" %> <%= pokemon.name %> <%= pokemon.number %>">
+            <div class="dex-entry">
+              <div class="screen-left">
+                <h5>#<%= pokemon.number %> <%= pokemon.name %></h5>
+                <%= link_to pokemon_path(pokemon) do %>
+                  <img src="<%= pokemon.image %>" class="image-1" alt="Pokemon Image">
+                  <img src="<%= pokemon.sprite_front %>" class ="image-2 invisible" alt="Pokemon Image">
+                <% end %>
+              </div>
+              <div class="screen-right">
+                <div class="typing">
+                  <div class="type <%= pokemon.type_1 %>"><%= pokemon.type_1 %></div>
+                  <% if pokemon.type_2 %>
+                    <div class="type <%= pokemon.type_2 %>"><%= pokemon.type_2 %></div>
+                  <% end %>
+                </div>
+                <div class="stat">
+                  <p>HP: <%= pokemon.hp %></p>
+                  <p>Attack: <%= pokemon.atk %></p>
+                  <p>Defense: <%= pokemon.def %></p>
+                  <p>Sp. Atk: <%= pokemon.sp_atk %></p>
+                  <p>Sp. Def: <%= pokemon.sp_def %></p>
+                  <p>Speed: <%= pokemon.spd %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div id="red-button"></div>
+  <div id="circle-button"></div>
+  <div id="pokedex-overlay"></div>
+  <div id="up"></div>
+  <div id="left">
+    <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+      <span class="sr-only">Previous</span>
+    </a>
+  </div>
+  <div id="right">
+    <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <div id="down"></div>
+  <div id="pokedex-overlay"></div>
+  </div>
+</div>
