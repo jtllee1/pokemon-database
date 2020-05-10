@@ -15,6 +15,10 @@ const search = () => {
     }
   });
 
+  search.addEventListener('click', () => {
+    search.value = "";
+  });
+
   document.addEventListener('keyup', (e) => {
     if (e.keyCode === 13) {
       const input = capitalize(search.value);
