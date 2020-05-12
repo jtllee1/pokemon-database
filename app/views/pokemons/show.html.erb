@@ -1,26 +1,10 @@
 <div>
   <h4><%= @pokemon.name %></h4>
   <p>#<%= @pokemon.number %></p>
-  <ul>
-    <li><%= @pokemon.type_1 %></li>
-    <% if @pokemon.type_2 %>
-      <li><%= @pokemon.type_2 %></li>
+  <img src="<%= @pokemon.image %>" alt="Pokemon Image">
+  <ul>Moves
+    <% @moves.each do |pokemon_move| %>
+      <li><%= pokemon_move.move.name %></li>
     <% end %>
   </ul>
-</div>
-
-<div id="pokedex">
-  <div id="screen">
-    <h5>#<%= @pokemon.number %> <%= @pokemon.name %></h5>
-    <img src="<%= @pokemon.image %>" alt="Pokemon Image">
-  </div>
-  <div id="red-button"></div>
-  <div id="circle-button"></div>
-  <div id="pokedex-overlay"></div>
-  <div id="up"></div>
-  <div id="left"></div>
-  <div id="right"></div>
-  <div id="down"></div>
-  <div id="pokedex-overlay"></div>
-  </div>
 </div>

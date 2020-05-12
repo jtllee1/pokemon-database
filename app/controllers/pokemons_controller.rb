@@ -3,5 +3,6 @@ class PokemonsController < ApplicationController
 
   def show
     @pokemon = Pokemon.find(params[:id])
+    @moves = PokemonMove.where(pokemon_id: params[:id])
   end
 end
