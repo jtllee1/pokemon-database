@@ -3,6 +3,7 @@ class CreateMoves < ActiveRecord::Migration[6.0]
     create_table :moves do |t|
       t.string :name
       t.string :damage_class
+      t.string :move_type
       t.integer :accuracy
       t.integer :power
       t.integer :pp

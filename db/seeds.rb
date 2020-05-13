@@ -23,6 +23,7 @@ end
   @move = JSON.parse(response)
 
   puts @name = @move['name'].capitalize
+  puts @move_type = @move['type']['name'].capitalize
   puts @damage_class = @move['damage_class']['name'].capitalize
   puts @accuracy = @move['accuracy']
   puts @power = @move['power']
@@ -45,6 +46,7 @@ end
   @new_move = Move.new(
     name: @name,
     damage_class: @damage_class,
+    move_type: @move_type,
     accuracy: @accuracy,
     power: @power,
     pp: @pp,
