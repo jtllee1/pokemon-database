@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2020_05_04_182713) do
   create_table "moves", force: :cascade do |t|
     t.string "name"
     t.string "damage_class"
+    t.string "move_type"
     t.integer "accuracy"
     t.integer "power"
     t.integer "pp"
