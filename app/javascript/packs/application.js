@@ -7,8 +7,10 @@ import "bootstrap";
 import { pokedexControl } from '../components/pokedex-control';
 import { search } from '../components/search';
 import { pokedexOpenClose } from '../components/open-close';
+import { healthBar } from '../components/health-bar';
 
 // fetchKantoPokemon();
-pokedexControl();
-search();
-pokedexOpenClose();
+// pokedexControl();
+// search();
+// pokedexOpenClose();
+// healthBar();
