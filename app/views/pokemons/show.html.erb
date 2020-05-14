@@ -1,15 +1,3 @@
-<div id="health-bar">
-  <% @counter = 1 %>
-  <% @pokemon.hp.times do %>
-    <div class="health-gauge health-<%= @counter %>"></div>
-    <% @counter += 1 %>
-  <% end %>
-</div>
-
-<div id="hp" class="invisible"><%= @pokemon.hp %></div>
-
-<div id="execute"></div>
-
 <div>
   <h4><%= @pokemon.name %></h4>
   <p>#<%= @pokemon.number %></p>
@@ -21,4 +9,3 @@
   </ul>
 </div>
 
-<%= javascript_pack_tag 'battle' %>

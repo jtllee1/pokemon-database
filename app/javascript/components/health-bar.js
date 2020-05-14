@@ -1,10 +1,10 @@
 const healthBar = () => {
-  const healthBar = document.getElementById("health-bar");
+  const healthBar = document.querySelector(".health-bar");
   const healthGauge = document.querySelectorAll(".health-gauge");
   const execute = document.getElementById("execute");
-  const hp = document.getElementById("hp").innerText;
+  const hpMax = document.getElementById("hp").innerText;
   const damage = 10;
-  let currentHealth = hp;
+  let currentHealth = hpMax;
 
   execute.addEventListener('click', () => {
     for (let step = 0; step < damage; step++) {
