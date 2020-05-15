@@ -1,33 +1,33 @@
 .battle-container {
   border: 1px solid black;
   width: 600px;
-  height: 400px;
+  height: 700px;
   .top-half {
     border: 1px solid black;
     width: 100%;
-    height: 300px;
+    height: 400px;
   }
   .bottom-half {
     border: 1px solid black;
     width: 100%;
-    height: 100px;
+    height: 300px;
+    .description {
+      width: 100%;
+      height: 100px;
+    }
     .moves {
       display: flex;
       flex-wrap: wrap;
-      width: 400px;
+      width: 100%;
       height: 100px;
       .move {
         border: 1px solid black;
-        height: 50px;
-        width: 200px;
+        height: 100px;
+        width: 50%;
       }
       .active {
         background: beige;
       }
-    }
-    .description {
-      width: 200px;
-      height: 100px;
     }
   }
 }
