@@ -4,8 +4,38 @@
   height: 700px;
   .top-half {
     border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: 400px;
+    .top-left {
+      border: 1px solid black;
+      width: 50%;
+      height: 50%;
+    }
+    .top-right {
+      border: 1px solid black;
+      width: 50%;
+      height: 50%;
+      img {
+        width: 70%;
+        height: 100%;
+      }
+    }
+    .bottom-left {
+      border: 1px solid black;
+      width: 50%;
+      height: 50%;
+      img {
+        width: 70%;
+        height: 100%;
+      }
+    }
+    .bottom-right {
+      border: 1px solid black;
+      width: 50%;
+      height: 50%;
+    }
   }
   .bottom-half {
     border: 1px solid black;
