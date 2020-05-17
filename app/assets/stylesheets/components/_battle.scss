@@ -52,8 +52,18 @@
       height: 100px;
       .move {
         border: 1px solid black;
+        border-radius: 8px;
         height: 100px;
         width: 50%;
+        padding: 16px 0;
+        text-align: center;
+        .move-data {
+          display: flex;
+          justify-content: center;
+          .type {
+            margin-right: 16px;
+          }
+        }
       }
       .active {
         background: beige;
