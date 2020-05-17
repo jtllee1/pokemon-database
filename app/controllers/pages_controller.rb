@@ -10,6 +10,10 @@ class PagesController < ApplicationController
     find_moves
     @pokemon_1 = Pokemon.find_by(name: "Dragonite")
     @pokemon_2 = Pokemon.find_by(name: "Mewtwo")
+    @move_1 = Move.find_by(name: "Hyper-beam")
+    @move_2 = Move.find_by(name: "Flamethrower")
+    @move_3 = Move.find_by(name: "Ice-beam")
+    @move_4 = Move.find_by(name: "Thunderbolt")
   end
 
   private
