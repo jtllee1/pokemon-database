@@ -18,7 +18,7 @@
       width: 50%;
       height: 50%;
       img {
-        width: 70%;
+        width: 68%;
         height: 100%;
       }
     }
@@ -27,7 +27,7 @@
       width: 50%;
       height: 50%;
       img {
-        width: 70%;
+        width: 68%;
         height: 100%;
       }
     }
@@ -42,31 +42,43 @@
     width: 100%;
     height: 300px;
     .description {
+      border: 1px solid black;
+      border-radius: 8px;
       width: 100%;
       height: 100px;
     }
     .moves {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       width: 100%;
       height: 100px;
       .move {
-        border: 1px solid black;
         border-radius: 8px;
-        height: 100px;
-        width: 50%;
-        padding: 16px 0;
+        height: 90%;
+        width: 48%;
+        margin: 4px;
+        padding: 12px 0;
         text-align: center;
-        .move-data {
-          display: flex;
-          justify-content: center;
-          .type {
-            margin-right: 16px;
+        .border {
+          background: white;
+          border: none;
+          p {
+            margin: 4px;
+          }
+          .move-data {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 4px;
+            .type {
+              margin-right: 16px;
+            }
           }
         }
       }
       .active {
-        background: beige;
+        border: 4px solid #757c84;
+        padding: 8px 0;
       }
     }
   }
