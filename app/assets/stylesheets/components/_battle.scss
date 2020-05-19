@@ -76,6 +76,9 @@
           }
         }
       }
+      .move:hover {
+        cursor: pointer;
+      }
       .active {
         border: 4px solid #757c84;
         padding: 8px 0;
