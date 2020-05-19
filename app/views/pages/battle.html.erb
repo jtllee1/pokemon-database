@@ -49,7 +49,7 @@
   <div class="bottom-half">
     <div class="description"></div>
     <div class="moves">
-      <div class="move move-1 <%= @move_1.move_type %> active">
+      <div id="move-1" class="move <%= @move_1.move_type %> active">
         <div class="border">
           <p><%= @move_1.name %></p>
           <div class="move-data">
@@ -58,7 +58,7 @@
           </div>
         </div>
       </div>
-      <div class="move move-2 <%= @move_2.move_type %>">
+      <div id="move-2" class="move <%= @move_2.move_type %>">
         <div class="border">
           <p><%= @move_2.name %></p>
           <div class="move-data">
@@ -67,7 +67,7 @@
           </div>
         </div>
       </div>
-      <div class="move move-3 <%= @move_3.move_type %>">
+      <div id="move-3" class="move <%= @move_3.move_type %>">
         <div class="border">
           <p><%= @move_3.name %></p>
           <div class="move-data">
@@ -76,7 +76,7 @@
           </div>
         </div>
       </div>
-      <div class="move move-4 <%= @move_4.move_type %>">
+      <div id="move-4" class="move <%= @move_4.move_type %>">
         <div class="border">
           <p><%= @move_4.name %></p>
           <div class="move-data">
