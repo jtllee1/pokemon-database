@@ -1,0 +1,190 @@
+#ds-lite {
+  background-image: url(DSLITE_open_on.png);
+  background-repeat: no-repeat;
+  background-size: 900px 900px;
+  margin: 0 auto;
+  margin-top: 80px;
+  width: 900px;
+  height: 900px;
+  position: relative;
+}
+
+#ds-lite-overlay {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+}
+
+#top-screen {
+  border-radius: 8px;
+  width: 398px;
+  height: 312px;
+  position: absolute;
+  top: 98px;
+  left: 248px;
+}
+
+#bottom-screen {
+  border-radius: 8px;
+  width: 378px;
+  height: 286px;
+  position: absolute;
+  bottom: 108px;
+  left: 257px;
+}
+
+#up-control {
+  width: 38px;
+  height: 36px;
+  position: absolute;
+  bottom: 296px;
+  left: 146px;
+  z-index: 1;
+}
+
+#right-control {
+  width: 38px;
+  height: 36px;
+  position: absolute;
+  bottom: 264px;
+  left: 180px;
+  z-index: 1;
+}
+
+#left-control {
+  width: 38px;
+  height: 36px;
+  position: absolute;
+  bottom: 264px;
+  left: 114px;
+  z-index: 1;
+}
+
+#down-control {
+  width: 38px;
+  height: 36px;
+  position: absolute;
+  bottom: 232px;
+  left: 146px;
+  z-index: 1;
+}
+
+#a-button {
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  bottom: 278px;
+  right: 108px;
+  z-index: 1;
+}
+
+#b-button {
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  bottom: 235px;
+  right: 151px;
+  z-index: 1;
+}
+
+#x-button {
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  bottom: 320px;
+  right: 151px;
+  z-index: 1;
+}
+
+#y-button {
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  bottom: 278px;
+  right: 194px;
+  z-index: 1;
+}
+
+#start-button {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 152px;
+  right: 214px;
+  z-index: 1;
+}
+
+#select-button {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 110px;
+  right: 214px;
+  z-index: 1;
+}
+
+#up-control:active ~ #ds-lite-overlay {
+  background-image: url(DSLITE_open_on_up.png);
+  background-repeat: no-repeat;
+  background-size: 900px 900px;
+}
+
+#right-control:active ~ #ds-lite-overlay {
+  background-image: url(DSLITE_open_on_right.png);
+  background-repeat: no-repeat;
+  background-size: 900px 900px;
+}
+
+#left-control:active ~ #ds-lite-overlay {
+  background-image: url(DSLITE_open_on_left.png);
+  background-repeat: no-repeat;
+  background-size: 900px 900px;
+}
+
+#down-control:active ~ #ds-lite-overlay {
+  background-image: url(DSLITE_open_on_down.png);
+  background-repeat: no-repeat;
+  background-size: 900px 900px;
+}
+
+#a-button:active ~ #ds-lite-overlay {
+  background-image: url(DSLITE_open_on_A.png);
+  background-repeat: no-repeat;
+  background-size: 900px 900px;
+}
+
+#b-button:active ~ #ds-lite-overlay {
+  background-image: url(DSLITE_open_on_B.png);
+  background-repeat: no-repeat;
+  background-size: 900px 900px;
+}
+
+#x-button:active ~ #ds-lite-overlay {
+  background-image: url(DSLITE_open_on_X.png);
+  background-repeat: no-repeat;
+  background-size: 900px 900px;
+}
+
+#y-button:active ~ #ds-lite-overlay {
+  background-image: url(DSLITE_open_on_Y.png);
+  background-repeat: no-repeat;
+  background-size: 900px 900px;
+}
+
+#start-button:active ~ #ds-lite-overlay {
+  background-image: url(DSLITE_open_on_start.png);
+  background-repeat: no-repeat;
+  background-size: 900px 900px;
+}
+
+#select-button:active ~ #ds-lite-overlay {
+  background-image: url(DSLITE_open_on_select.png);
+  background-repeat: no-repeat;
+  background-size: 900px 900px;
+}
