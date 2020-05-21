@@ -1,0 +1,5 @@
+const damage = () => {
+
+}
+
+export { damage };

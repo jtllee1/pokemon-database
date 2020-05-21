@@ -2,6 +2,10 @@
 
 <div class="pokemons invisible">
   <div class="pokemon-1">
+    <div class="types">
+      <p id="1-type-1"><%= @pokemon_1.type_1 %></p>
+      <p id="1-type-2"><%= @pokemon_1.type_2 %></p>
+    </div>
     <div class="stats">
       <%= render "shared/pokemon-stats", number: "1", hp: @hp, atk: @atk, defe: @def, sp_atk: @sp_atk, sp_def: @sp_def, spd: @spd %>
     </div>
@@ -14,6 +18,10 @@
   </div>
 
   <div class="pokemon-2">
+    <div class="types">
+      <p id="2-type-1"><%= @pokemon_2.type_1 %></p>
+      <p id="2-type-2"><%= @pokemon_2.type_2 %></p>
+    </div>
     <div class="stats">
       <%= render "shared/pokemon-stats", number: "2", hp: @hp_2, atk: @atk_2, defe: @def_2, sp_atk: @sp_atk_2, sp_def: @sp_def_2, spd: @spd_2 %>
     </div>
@@ -26,29 +34,45 @@
   </div>
 </div>
 
-<div class="health-bar">
+<div id="ds-lite">
+  <div id="top-screen">
+
+  </div>
+  <div id="bottom-screen">
+
+  </div>
+  <div id="up-control"></div>
+  <div id="right-control"></div>
+  <div id="left-control"></div>
+  <div id="down-control"></div>
+  <div id="a-button"></div>
+  <div id="b-button"></div>
+  <div id="x-button"></div>
+  <div id="y-button"></div>
+  <div id="start-button"></div>
+  <div id="select-button"></div>
+  <div id="ds-lite-overlay"></div>
+</div>
+
+<div id="health-bar-1" class="health-bar">
   <% @counter_1 = 1 %>
-  <% @pokemon_1.hp.times do %>
-    <div class="health-gauge health-<%= @counter_1 %>"></div>
+  <% @hp.times do %>
+    <div id="1-health-<%= @counter_1 %>" class="health-gauge" style="width: <%= 200.to_f / @hp %>px;"></div>
     <% @counter_1 += 1 %>
   <% end %>
 </div>
-
-<div id="hp" class="invisible"><%= @pokemon_1.hp %></div>
 
 <div>
   <h4><%= @pokemon_1.name %></h4>
 </div>
 
-<div class="health-bar">
+<div id="health-bar-2" class="health-bar">
   <% @counter_2 = 1 %>
-  <% @pokemon_2.hp.times do %>
-    <div class="health-gauge health-<%= @counter_2 %>"></div>
+  <% @hp_2.times do %>
+    <div id="2-health-<%= @counter_2 %>" class="health-gauge" style="width: <%= 200.to_f / @hp_2 %>px;"></div>
     <% @counter_2 += 1 %>
   <% end %>
 </div>
-
-<div id="hp" class="invisible"><%= @pokemon_2.hp %></div>
 
 <div>
   <h4><%= @pokemon_2.name %></h4>

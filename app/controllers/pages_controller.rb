@@ -28,12 +28,12 @@ class PagesController < ApplicationController
     @move_2 = Move.find_by(name: "Flamethrower")
     @move_3 = Move.find_by(name: "Ice-beam")
     @move_4 = Move.find_by(name: "Thunderbolt")
-    @hp = @pokemon_1.hp * 2 + 204
-    @atk = @pokemon_1.atk * 2 + 99
-    @def = @pokemon_1.def * 2 + 99
-    @sp_atk = @pokemon_1.sp_atk * 2 + 99
-    @sp_def = @pokemon_1.sp_def * 2 + 99
-    @spd = @pokemon_1.spd * 2 + 99
+    @hp = (@pokemon_1.hp * 2 + 204).to_i
+    @atk = (@pokemon_1.atk * 2 + 99).to_i
+    @def = (@pokemon_1.def * 2 + 99).to_i
+    @sp_atk = (@pokemon_1.sp_atk * 2 + 99).to_i
+    @sp_def = (@pokemon_1.sp_def * 2 + 99).to_i
+    @spd = (@pokemon_1.spd * 2 + 99).to_i
   end
 
   def pokemon_two
@@ -42,11 +42,11 @@ class PagesController < ApplicationController
     @move_2_2 = Move.find_by(name: "Swift")
     @move_3_2 = Move.find_by(name: "Hyper-beam")
     @move_4_2 = Move.find_by(name: "Recover")
-    @hp_2 = @pokemon_2.hp * 2 + 204
-    @atk_2 = @pokemon_2.atk * 2 + 99
-    @def_2 = @pokemon_2.def * 2 + 99
-    @sp_atk_2 = @pokemon_2.sp_atk * 2 + 99
-    @sp_def_2 = @pokemon_2.sp_def * 2 + 99
-    @spd_2 = @pokemon_2.spd * 2 + 99
+    @hp_2 = (@pokemon_2.hp * 2 + 204).to_i
+    @atk_2 = (@pokemon_2.atk * 2 + 99).to_i
+    @def_2 = (@pokemon_2.def * 2 + 99).to_i
+    @sp_atk_2 = (@pokemon_2.sp_atk * 2 + 99).to_i
+    @sp_def_2 = (@pokemon_2.sp_def * 2 + 99).to_i
+    @spd_2 = (@pokemon_2.spd * 2 + 99).to_i
   end
 end
