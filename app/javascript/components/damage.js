@@ -6,7 +6,14 @@ const damages = (pokemon1, pokemon2, move) => {
     var offence = pokemon1.spatk
     var defence = pokemon2.spdef
   };
-  return ((42 * move.power * (offence/defence))/50) + 2;
+  var check = Math.random()
+  var accuracy = move.accuracy / 100
+  if (check <= accuracy) {
+    return ((42 * move.power * (offence/defence))/50) + 2;
+  } else {
+    console.log("It missed!");
+    return 0;
+  }
 }
 
 export { damages };
