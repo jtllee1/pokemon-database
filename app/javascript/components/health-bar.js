@@ -9,13 +9,15 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
 
   const healthBar2 = document.querySelector(".health-bar-2");
   const hpMax2 = pokemon2["hp"];
-  const damage2 = 10;
+  const enemyMoves = [bMove1, bMove2, bMove3, bMove4];
   let currentHealth2 = hpMax2;
 
   const execute = document.getElementById("execute");
 
   execute.addEventListener('click', () => {
     var chosenMove = document.querySelector(".active").id;
+    var chosenMove2 = enemyMoves[Math.floor(Math.random()*enemyMoves.length)];
+
     if (chosenMove === "move-1") {
       var damage = damages(pokemon1, pokemon2, aMove1);
     } else if (chosenMove === "move-2") {
@@ -25,7 +27,12 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
     } else if (chosenMove === "move-4") {
       var damage = damages(pokemon1, pokemon2, aMove4);
     }
+
+    var damage2 = damages(pokemon2, pokemon1, chosenMove2);
+
     console.log(damage);
+    console.log(damage2);
+
     for (let step = 0; step < damage2; step++) {
       document.getElementById('1-health-'+currentHealth).classList.add("red");
       currentHealth = parseInt(currentHealth);
