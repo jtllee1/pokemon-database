@@ -12,7 +12,7 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
   const enemyMoves = [bMove1, bMove2, bMove3, bMove4];
   let currentHealth2 = hpMax2;
 
-  const execute = document.getElementById("execute");
+  const execute = document.getElementById("a-button");
 
   execute.addEventListener('click', () => {
     var chosenMove = document.querySelector(".active").id;
