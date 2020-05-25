@@ -1,4 +1,5 @@
 const pokemonCreate = (pokemon1, pokemon2) => {
+  pokemon1["name"] = document.getElementById("name-1").innerText;
   pokemon1["hp"] = document.getElementById("hp-1").innerText;
   pokemon1["atk"] = document.getElementById("atk-1").innerText;
   pokemon1["def"] = document.getElementById("def-1").innerText;
@@ -8,6 +9,7 @@ const pokemonCreate = (pokemon1, pokemon2) => {
   pokemon1["type-1"] = document.getElementById("1-type-1").innerText;
   pokemon1["type-2"] = document.getElementById("1-type-2").innerText;
 
+  pokemon2["name"] = document.getElementById("name-2").innerText;
   pokemon2["hp"] = document.getElementById("hp-2").innerText;
   pokemon2["atk"] = document.getElementById("atk-2").innerText;
   pokemon2["def"] = document.getElementById("def-2").innerText;
