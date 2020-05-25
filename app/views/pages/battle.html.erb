@@ -36,7 +36,33 @@
 
 <div id="ds-lite">
   <div id="top-screen">
-
+    <div id="battle-image">
+      <div id="top-left">
+        <div id="health-bar-2" class="health-bar">
+          <% @counter_2 = 1 %>
+          <% @hp_2.times do %>
+            <div id="2-health-<%= @counter_2 %>" class="health-gauge" style="width: <%= 100.to_f / @hp_2 %>px;"></div>
+            <% @counter_2 += 1 %>
+          <% end %>
+        </div>
+      </div>
+      <div id="top-right">
+        <img src="<%= @pokemon_2.sprite_front %>" alt="Pokemon Image">
+      </div>
+      <div id="bottom-left">
+        <img src="<%= @pokemon_1.sprite_back %>" alt="Pokemon Image">
+      </div>
+      <div id="bottom-right">
+        <div id="health-bar-1" class="health-bar">
+          <% @counter_1 = 1 %>
+          <% @hp.times do %>
+            <div id="1-health-<%= @counter_1 %>" class="health-gauge" style="width: <%= 100.to_f / @hp %>px;"></div>
+            <% @counter_1 += 1 %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div id="description"></div>
   </div>
   <div id="bottom-screen">
 
@@ -54,25 +80,11 @@
   <div id="ds-lite-overlay"></div>
 </div>
 
-<div id="health-bar-1" class="health-bar">
-  <% @counter_1 = 1 %>
-  <% @hp.times do %>
-    <div id="1-health-<%= @counter_1 %>" class="health-gauge" style="width: <%= 200.to_f / @hp %>px;"></div>
-    <% @counter_1 += 1 %>
-  <% end %>
-</div>
 
 <div>
   <h4><%= @pokemon_1.name %></h4>
 </div>
 
-<div id="health-bar-2" class="health-bar">
-  <% @counter_2 = 1 %>
-  <% @hp_2.times do %>
-    <div id="2-health-<%= @counter_2 %>" class="health-gauge" style="width: <%= 200.to_f / @hp_2 %>px;"></div>
-    <% @counter_2 += 1 %>
-  <% end %>
-</div>
 
 <div>
   <h4><%= @pokemon_2.name %></h4>
