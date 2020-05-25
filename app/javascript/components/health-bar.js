@@ -19,32 +19,37 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
     var chosenMove2 = enemyMoves[Math.floor(Math.random()*enemyMoves.length)];
 
     if (chosenMove === "move-1") {
-      var damage = damages(pokemon1, pokemon2, aMove1);
-    } else if (chosenMove === "move-2") {
-      var damage = damages(pokemon1, pokemon2, aMove2);
-    } else if (chosenMove === "move-3") {
-      var damage = damages(pokemon1, pokemon2, aMove3);
-    } else if (chosenMove === "move-4") {
-      var damage = damages(pokemon1, pokemon2, aMove4);
+      var playerMove = aMove1;
+    }
+    else if (chosenMove === "move-2") {
+      var playerMove = aMove2;
+    }
+    else if (chosenMove === "move-3") {
+      var playerMove = aMove3;
+    }
+    else if (chosenMove === "move-4") {
+      var playerMove = aMove4;
     }
 
-    var damage2 = damages(pokemon2, pokemon1, chosenMove2);
+    setTimeout(() => {
+      var damage = damages(pokemon1, pokemon2, playerMove);
+      for (let step = 0; step < damage; step++) {
+        document.getElementById('2-health-'+currentHealth2).classList.add("red");
+        currentHealth2 = parseInt(currentHealth2);
+        currentHealth2 = currentHealth2 - 1;
+        currentHealth2 = currentHealth2.toString();
+      };
+    }, 0);
 
-    console.log(damage);
-    console.log(damage2);
-
-    for (let step = 0; step < damage2; step++) {
-      document.getElementById('1-health-'+currentHealth).classList.add("red");
-      currentHealth = parseInt(currentHealth);
-      currentHealth = currentHealth - 1;
-      currentHealth = currentHealth.toString();
-    };
-    for (let step = 0; step < damage; step++) {
-      document.getElementById('2-health-'+currentHealth2).classList.add("red");
-      currentHealth2 = parseInt(currentHealth2);
-      currentHealth2 = currentHealth2 - 1;
-      currentHealth2 = currentHealth2.toString();
-    };
+    setTimeout(() => {
+      var damage2 = damages(pokemon2, pokemon1, chosenMove2);
+      for (let step = 0; step < damage2; step++) {
+        document.getElementById('1-health-'+currentHealth).classList.add("red");
+        currentHealth = parseInt(currentHealth);
+        currentHealth = currentHealth - 1;
+        currentHealth = currentHealth.toString();
+      };
+    }, 3000);
   });
 }
 
