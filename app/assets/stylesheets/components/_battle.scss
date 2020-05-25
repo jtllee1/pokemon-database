@@ -35,92 +35,43 @@
   height: 30%;
 }
 
-.battle-container {
-  border: 1px solid black;
-  width: 600px;
-  height: 700px;
-  .top-half {
-    border: 1px solid black;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 400px;
-    .top-left {
-      border: 1px solid black;
-      width: 50%;
-      height: 50%;
-    }
-    .top-right {
-      border: 1px solid black;
-      width: 50%;
-      height: 50%;
-      img {
-        width: 68%;
-        height: 100%;
+#moves {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 2% 1%;
+  .move {
+    border-radius: 8px;
+    height: 35%;
+    width: 45%;
+    text-align: center;
+    margin: auto 2%;
+    padding: 12px 0;
+    z-index: 1;
+    .border {
+      background: white;
+      border: none;
+      padding: 4px;
+      p {
+        margin-bottom: 10px;
       }
-    }
-    .bottom-left {
-      border: 1px solid black;
-      width: 50%;
-      height: 50%;
-      img {
-        width: 68%;
-        height: 100%;
-      }
-    }
-    .bottom-right {
-      border: 1px solid black;
-      width: 50%;
-      height: 50%;
-    }
-  }
-  .bottom-half {
-    border: 1px solid black;
-    width: 100%;
-    height: 300px;
-    .description {
-      border: 1px solid black;
-      border-radius: 8px;
-      width: 100%;
-      height: 100px;
-    }
-    .moves {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 100%;
-      height: 100px;
-      .move {
-        border-radius: 8px;
-        height: 90%;
-        width: 48%;
-        margin: 4px;
-        padding: 12px 0;
-        text-align: center;
-        .border {
-          background: white;
-          border: none;
-          p {
-            margin: 4px;
-          }
-          .move-data {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 4px;
-            .type {
-              margin-right: 16px;
-            }
-          }
+      .move-data {
+        display: flex;
+        justify-content: center;
+        .type {
+          margin-right: 8px;
         }
       }
-      .move:hover {
-        cursor: pointer;
-      }
-      .active {
-        border: 4px solid #757c84;
-        padding: 8px 0;
-      }
     }
+  }
+  .move:hover {
+    cursor: pointer;
+  }
+  .active {
+    border: 3px solid #757c84;
+    padding: 9px 0;
   }
 }
 

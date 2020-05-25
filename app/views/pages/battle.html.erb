@@ -62,55 +62,12 @@
         </div>
       </div>
     </div>
-    <div id="description"></div>
+    <div id="description">
+
+    </div>
   </div>
   <div id="bottom-screen">
-
-  </div>
-  <div id="up-control"></div>
-  <div id="right-control"></div>
-  <div id="left-control"></div>
-  <div id="down-control"></div>
-  <div id="a-button"></div>
-  <div id="b-button"></div>
-  <div id="x-button"></div>
-  <div id="y-button"></div>
-  <div id="start-button"></div>
-  <div id="select-button"></div>
-  <div id="ds-lite-overlay"></div>
-</div>
-
-
-<div>
-  <h4><%= @pokemon_1.name %></h4>
-</div>
-
-
-<div>
-  <h4><%= @pokemon_2.name %></h4>
-</div>
-
-<div id="execute"></div>
-
-
-<div class="battle-container">
-  <div class="top-half">
-    <div class="top-left">
-
-    </div>
-    <div class="top-right">
-      <img src="<%= @pokemon_2.sprite_front %>" alt="Pokemon Image">
-    </div>
-    <div class="bottom-left">
-      <img src="<%= @pokemon_1.sprite_back %>" alt="Pokemon Image">
-    </div>
-    <div class="bottom-right">
-
-    </div>
-  </div>
-  <div class="bottom-half">
-    <div class="description"></div>
-    <div class="moves">
+    <div id="moves">
       <div id="move-1" class="move <%= @move_1.move_type %> active">
         <div class="border">
           <p><%= @move_1.name %></p>
@@ -149,6 +106,29 @@
       </div>
     </div>
   </div>
+  <div id="up-control"></div>
+  <div id="right-control"></div>
+  <div id="left-control"></div>
+  <div id="down-control"></div>
+  <div id="a-button"></div>
+  <div id="b-button"></div>
+  <div id="x-button"></div>
+  <div id="y-button"></div>
+  <div id="start-button"></div>
+  <div id="select-button"></div>
+  <div id="ds-lite-overlay"></div>
 </div>
+
+
+<div>
+  <h4><%= @pokemon_1.name %></h4>
+</div>
+
+
+<div>
+  <h4><%= @pokemon_2.name %></h4>
+</div>
+
+<div id="execute"></div>
 
 <%= javascript_pack_tag 'battle' %>
