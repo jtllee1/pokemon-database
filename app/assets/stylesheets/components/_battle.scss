@@ -1,3 +1,40 @@
+#battle-image {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 70%;
+}
+
+#top-left {
+  border: 1px solid black;
+  width: 50%;
+  height: 50%;
+}
+
+#top-right {
+  border: 1px solid black;
+  width: 50%;
+  height: 50%;
+}
+
+#bottom-left {
+  border: 1px solid black;
+  width: 50%;
+  height: 50%;
+}
+
+#bottom-right {
+  border: 1px solid black;
+  width: 50%;
+  height: 50%;
+}
+
+#description {
+  border: 1px solid black;
+  width: 100%;
+  height: 30%;
+}
+
 .battle-container {
   border: 1px solid black;
   width: 600px;
@@ -90,7 +127,7 @@
 .health-bar {
   display: flex;
   border: 1px solid black;
-  width: 200px;
+  width: 100px;
   height: 10px;
 }
 
