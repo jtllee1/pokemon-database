@@ -49,7 +49,15 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
         currentHealth = currentHealth - 1;
         currentHealth = currentHealth.toString();
       };
-    }, 3000);
+    }, 1500);
+
+    setTimeout(() => {
+      const description = document.getElementById('description');
+      description.innerText = "";
+      let descriptionText = document.createElement('p');
+      descriptionText.innerText = `What will ${pokemon1.name} do?`
+      description.append(descriptionText);
+    }, 3500);
   });
 }
 

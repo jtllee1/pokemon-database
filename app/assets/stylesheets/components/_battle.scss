@@ -6,33 +6,48 @@
 }
 
 #top-left {
-  border: 1px solid black;
   width: 50%;
   height: 50%;
 }
 
 #top-right {
-  border: 1px solid black;
   width: 50%;
   height: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 #bottom-left {
-  border: 1px solid black;
   width: 50%;
   height: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 #bottom-right {
-  border: 1px solid black;
   width: 50%;
   height: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#description-border {
+  background: #635C88;
+  border: 1px solid rgba(230, 230, 230, 1.0);
+  border-radius: 8px;
+  width: 100%;
+  height: 30%;
+  padding: 8px 32px 8px 8px;
 }
 
 #description {
-  border: 1px solid black;
+  background: white;
+  border: 1px solid rgba(180, 180, 180, 1.0);
+  border-radius: 4px;
   width: 100%;
-  height: 30%;
+  height: 100%;
+  padding: 8px;
 }
 
 #moves {
@@ -75,11 +90,37 @@
   }
 }
 
+.health-border {
+  border: 1px solid black;
+  background: white;
+  border-radius: 8px;
+  width: 160px;
+  height: 50px;
+  padding: 4px 8px;
+  margin: 8px;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 12px;
+  .level {
+    font-size: 12px;
+    margin-top: 2px;
+  }
+}
+
+.health {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .health-bar {
   display: flex;
-  border: 1px solid black;
+  border-radius: 8px;
+  overflow: hidden;
   width: 100px;
-  height: 10px;
+  height: 6px;
 }
 
 .health-gauge {
@@ -91,8 +132,3 @@
   background: red;
 }
 
-#execute {
-  border: 1px solid black;
-  width: 50px;
-  height: 50px;
-}
