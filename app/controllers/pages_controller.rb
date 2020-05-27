@@ -39,8 +39,8 @@ class PagesController < ApplicationController
   def pokemon_two
     @pokemon_2 = Pokemon.find_by(name: "Mewtwo")
     @move_1_2 = Move.find_by(name: "Psychic")
-    @move_2_2 = Move.find_by(name: "Swift")
-    @move_3_2 = Move.find_by(name: "Hyper-beam")
+    @move_2_2 = Move.find_by(name: "Hyper-beam")
+    @move_3_2 = Move.find_by(name: "Swift")
     @move_4_2 = Move.find_by(name: "Recover")
     @hp_2 = (@pokemon_2.hp * 2 + 204).to_i
     @atk_2 = (@pokemon_2.atk * 2 + 99).to_i
