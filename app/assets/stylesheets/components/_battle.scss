@@ -50,6 +50,38 @@
   padding: 8px;
 }
 
+#bottom-bg {
+  border: 8px solid rgba(40, 40, 40, 0.4);
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 63px;
+  left: 109px;
+  overflow: hidden;
+}
+
+#pokeball-top {
+  border-bottom: 8px solid rgba(80, 80, 80, 0.4);
+  width: 144px;
+  height: 76px;
+  background: rgba(255, 0, 0, 0.4);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#pokeball-middle {
+  border: 8px solid rgba(40, 40, 40, 0.4);
+  background: white;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 48px;
+  left: 48px;
+}
+
 #moves {
   display: flex;
   flex-wrap: wrap;
