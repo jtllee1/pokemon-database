@@ -123,7 +123,7 @@
 }
 
 .health-border {
-  border: 1px solid black;
+  border: 3px solid rgba(60, 60, 60, 0.6);
   background: white;
   border-radius: 8px;
   width: 160px;
@@ -145,6 +145,7 @@
 .health {
   display: flex;
   justify-content: flex-end;
+  position: absolute;
 }
 
 .health-bar {
@@ -164,3 +165,11 @@
   background: red;
 }
 
+#health-display {
+  display: flex;
+  font-size: 8px;
+  margin-right: 4px;
+  position: relative;
+  bottom: 3px;
+  right: 2px;
+}

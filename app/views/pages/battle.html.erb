@@ -67,6 +67,10 @@
             <h6 class="level"><b>Lv100</b></h6>
           </div>
           <div class="health">
+            <div id="health-display">
+              <div id="current-health"><%= @hp %></div>/
+              <div id="max-health"><%= @hp %></div>
+            </div>
             <div id="health-bar-1" class="health-bar">
               <% @counter_1 = 1 %>
               <% @hp.times do %>
