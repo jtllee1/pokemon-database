@@ -12,24 +12,20 @@ const damages = (pokemon1, pokemon2, move) => {
   let accuracy = move.accuracy
 
   const description = document.getElementById('description');
-  description.innerText = "";
   let descriptionText = document.createElement('p');
 
   if (check < accuracy) {
     let damage = ((42 * move.power * (offence/defence))/50) + 2;
-    descriptionText.innerText = `${pokemon1.name} used ${move.name}! It hit!`
-    description.append(descriptionText);
+    description.innerText = `${pokemon1.name} used ${move.name}! It hit!`
     return damage;
   }
   else if (move.name === "Swift") {
     let damage = ((42 * move.power * (offence/defence))/50) + 2;
-    descriptionText.innerText = `${pokemon1.name} used ${move.name}! It hit!`
-    description.append(descriptionText);
+    description.innerText = `${pokemon1.name} used ${move.name}! It hit!`
     return damage;
   }
   else {
-    descriptionText.innerText = `${pokemon1.name} used ${move.name}! It missed!`
-    description.append(descriptionText);
+    description.innerText = `${pokemon1.name} used ${move.name}! It missed!`
     return 0;
   }
 }

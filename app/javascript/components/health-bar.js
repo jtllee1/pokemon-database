@@ -1,6 +1,7 @@
 import { damages } from '../components/damages';
 
 const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, bMove2, bMove3, bMove4) => {
+  const healthQuery = document.getElementById("current-health");
   const healthBar = document.querySelector(".health-bar-1");
   console.log(chosenMove);
   const hpMax = pokemon1["hp"];
@@ -50,6 +51,7 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
           currentHealth = currentHealth - 1;
           currentHealth = currentHealth.toString();
         };
+        healthQuery.innerText = currentHealth;
       }, 1500);
     }
     else if (pokemon1.spd < pokemon2.spd) {
@@ -61,6 +63,7 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
           currentHealth = currentHealth - 1;
           currentHealth = currentHealth.toString();
         };
+        healthQuery.innerText = currentHealth;
       }, 0);
 
       setTimeout(() => {
