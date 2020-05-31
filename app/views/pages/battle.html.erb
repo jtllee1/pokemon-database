@@ -3,8 +3,8 @@
 <div class="pokemons invisible">
   <div class="pokemon-1">
     <div class="types">
-      <p id="1-type-1"><%= @pokemon_1.type_1 %></p>
-      <p id="1-type-2"><%= @pokemon_1.type_2 %></p>
+      <p id="p1-type-1"><%= @pokemon_1.type_1 %></p>
+      <p id="p1-type-2"><%= @pokemon_1.type_2 %></p>
     </div>
     <div class="stats">
       <%= render "shared/pokemon-stats", number: "1", hp: @hp, atk: @atk, defe: @def, sp_atk: @sp_atk, sp_def: @sp_def, spd: @spd %>
@@ -19,8 +19,8 @@
 
   <div class="pokemon-2">
     <div class="types">
-      <p id="2-type-1"><%= @pokemon_2.type_1 %></p>
-      <p id="2-type-2"><%= @pokemon_2.type_2 %></p>
+      <p id="p2-type-1"><%= @pokemon_2.type_1 %></p>
+      <p id="p2-type-2"><%= @pokemon_2.type_2 %></p>
     </div>
     <div class="stats">
       <%= render "shared/pokemon-stats", number: "2", hp: @hp_2, atk: @atk_2, defe: @def_2, sp_atk: @sp_atk_2, sp_def: @sp_def_2, spd: @spd_2 %>
