@@ -10,8 +10,10 @@ const damages = (pokemon1, pokemon2, move) => {
     var defence = pokemon2.spdef
   };
 
-  let check = Math.random() * 100
-  let accuracy = move.accuracy
+  let check = Math.random() * 100;
+  let accuracy = move.accuracy;
+
+  let critCheck = Math.random() * 100;
 
   const description = document.getElementById('description');
   let descriptionText = document.createElement('p');
@@ -19,39 +21,37 @@ const damages = (pokemon1, pokemon2, move) => {
   let typeDamage1 = typeAdvantage(move["type"], pokemon1["type-1"]);
   let typeDamage2 = typeAdvantage(move["type"], pokemon1["type-2"]);
 
-  if (check < accuracy) {
-    let damage = (((42 * move.power * (offence/defence))/50) + 2) * typeDamage1 * typeDamage2;
+  if (check < accuracy || move.name == "Swift") {
+    if (critCheck < 4.167) {
+      var critDamage = 1.5;
+    }
+    else {
+      var critDamage = 1;
+    }
+
+    let damage = (((42 * move.power * (offence/defence))/50) + 2) * typeDamage1 * typeDamage2 * critDamage;
+
+    if (critDamage == 1) {
+      var hit = "It hit!";
+    }
+    else {
+      var hit = "It was a critical hit!";
+    }
 
     if (typeDamage1 * typeDamage2 == 1) {
-      description.innerText = `${pokemon1.name} used ${move.name}! It hit!`
+      var effective = "";
     }
     else if (typeDamage1 * typeDamage2 >= 2) {
-      description.innerText = `${pokemon1.name} used ${move.name}! It hit! It was super effective!`
+      var effective = "It was super effective!";
     }
     else if (typeDamage1 * typeDamage2 <= 0.5) {
-      description.innerText = `${pokemon1.name} used ${move.name}! It hit! It was not very effective!`
+      var effective = "It was not very effective!";
     }
     else if (typeDamage1 * typeDamage2 == 0) {
-      description.innerText = `${pokemon1.name} used ${move.name}! It hit! It had no effect!`
+      var effective = "It had no effect!";
     }
 
-    return damage;
-  }
-  else if (move.name === "Swift") {
-    let damage = (((42 * move.power * (offence/defence))/50) + 2) * typeDamage1 * typeDamage2;
-
-    if (typeDamage1 * typeDamage2 == 1) {
-      description.innerText = `${pokemon1.name} used ${move.name}! It hit!`
-    }
-    else if (typeDamage1 * typeDamage2 >= 2) {
-      description.innerText = `${pokemon1.name} used ${move.name}! It hit! It was super effective!`
-    }
-    else if (typeDamage1 * typeDamage2 <= 0.5) {
-      description.innerText = `${pokemon1.name} used ${move.name}! It hit! It was not very effective!`
-    }
-    else if (typeDamage1 * typeDamage2 == 0) {
-      description.innerText = `${pokemon1.name} used ${move.name}! It hit! It had no effect!`
-    }
+    description.innerText = `${pokemon1.name} used ${move.name}! ${hit} ${effective}`
 
     return damage;
   }
