@@ -29,7 +29,14 @@ const damages = (pokemon1, pokemon2, move) => {
       var critDamage = 1;
     }
 
-    let damage = (((42 * move.power * (offence/defence))/50) + 2) * typeDamage1 * typeDamage2 * critDamage;
+    if (pokemon1["type-1"] == move["type"] || pokemon1["type-2"] == move["type"]) {
+      var stab = 1.5;
+    }
+    else {
+      var stab = 1;
+    }
+
+    let damage = (((42 * move.power * (offence/defence))/50) + 2) * typeDamage1 * typeDamage2 * critDamage * stab;
 
     if (critDamage == 1) {
       var hit = "It hit!";
