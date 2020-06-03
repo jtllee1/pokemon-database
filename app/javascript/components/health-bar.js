@@ -32,9 +32,9 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
       var playerMove = aMove4;
     };
 
-    if (currentHealth > 0 && currentHealth2 > 0) {
-      if (pokemon1.spd > pokemon2.spd) {
-        setTimeout(() => {
+    if (pokemon1.spd > pokemon2.spd) {
+      setTimeout(() => {
+        if (currentHealth > 0) {
           var damage = damages(pokemon1, pokemon2, playerMove);
           for (let step = 0; step < damage; step++) {
             document.getElementById('2-health-'+currentHealth2).classList.add("red");
@@ -42,9 +42,11 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
             currentHealth2 = currentHealth2 - 1;
             currentHealth2 = currentHealth2.toString();
           };
-        }, 0);
+        };
+      }, 0);
 
-        setTimeout(() => {
+      setTimeout(() => {
+        if (currentHealth2 > 0) {
           var damage2 = damages(pokemon2, pokemon1, chosenMove2);
           for (let step = 0; step < damage2; step++) {
             document.getElementById('1-health-'+currentHealth).classList.add("red");
@@ -53,10 +55,12 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
             currentHealth = currentHealth.toString();
           };
           healthQuery.innerText = currentHealth;
-        }, 1500);
-      }
-      else if (pokemon1.spd < pokemon2.spd) {
-        setTimeout(() => {
+        };
+      }, 1500);
+    }
+    else if (pokemon1.spd < pokemon2.spd) {
+      setTimeout(() => {
+        if (currentHealth2 > 0) {
           var damage2 = damages(pokemon2, pokemon1, chosenMove2);
           for (let step = 0; step < damage2; step++) {
             document.getElementById('1-health-'+currentHealth).classList.add("red");
@@ -65,9 +69,11 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
             currentHealth = currentHealth.toString();
           };
           healthQuery.innerText = currentHealth;
-        }, 0);
+        };
+      }, 0);
 
-        setTimeout(() => {
+      setTimeout(() => {
+        if (currentHealth > 0) {
           var damage = damages(pokemon1, pokemon2, playerMove);
           for (let step = 0; step < damage; step++) {
             document.getElementById('2-health-'+currentHealth2).classList.add("red");
@@ -75,8 +81,8 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
             currentHealth2 = currentHealth2 - 1;
             currentHealth2 = currentHealth2.toString();
           };
-        }, 1500);
-      };
+        };
+      }, 1500);
     };
 
     setTimeout(() => {
