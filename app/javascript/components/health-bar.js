@@ -1,9 +1,9 @@
 import { damages } from '../components/damages';
+import { battleDialogue } from '../components/battle-dialogue';
 
 const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, bMove2, bMove3, bMove4) => {
   const healthQuery = document.getElementById("current-health");
   const healthBar = document.querySelector(".health-bar-1");
-  console.log(chosenMove);
   const hpMax = pokemon1["hp"];
   var chosenMove;
   let currentHealth = hpMax;
@@ -30,61 +30,59 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
     }
     else if (chosenMove === "move-4") {
       var playerMove = aMove4;
-    }
+    };
 
-    if (pokemon1.spd > pokemon2.spd) {
-      setTimeout(() => {
-        var damage = damages(pokemon1, pokemon2, playerMove);
-        for (let step = 0; step < damage; step++) {
-          document.getElementById('2-health-'+currentHealth2).classList.add("red");
-          currentHealth2 = parseInt(currentHealth2);
-          currentHealth2 = currentHealth2 - 1;
-          currentHealth2 = currentHealth2.toString();
-        };
-      }, 0);
+    if (currentHealth > 0 && currentHealth2 > 0) {
+      if (pokemon1.spd > pokemon2.spd) {
+        setTimeout(() => {
+          var damage = damages(pokemon1, pokemon2, playerMove);
+          for (let step = 0; step < damage; step++) {
+            document.getElementById('2-health-'+currentHealth2).classList.add("red");
+            currentHealth2 = parseInt(currentHealth2);
+            currentHealth2 = currentHealth2 - 1;
+            currentHealth2 = currentHealth2.toString();
+          };
+        }, 0);
 
-      setTimeout(() => {
-        var damage2 = damages(pokemon2, pokemon1, chosenMove2);
-        for (let step = 0; step < damage2; step++) {
-          document.getElementById('1-health-'+currentHealth).classList.add("red");
-          currentHealth = parseInt(currentHealth);
-          currentHealth = currentHealth - 1;
-          currentHealth = currentHealth.toString();
-        };
-        healthQuery.innerText = currentHealth;
-      }, 1500);
-    }
-    else if (pokemon1.spd < pokemon2.spd) {
-      setTimeout(() => {
-        var damage2 = damages(pokemon2, pokemon1, chosenMove2);
-        for (let step = 0; step < damage2; step++) {
-          document.getElementById('1-health-'+currentHealth).classList.add("red");
-          currentHealth = parseInt(currentHealth);
-          currentHealth = currentHealth - 1;
-          currentHealth = currentHealth.toString();
-        };
-        healthQuery.innerText = currentHealth;
-      }, 0);
+        setTimeout(() => {
+          var damage2 = damages(pokemon2, pokemon1, chosenMove2);
+          for (let step = 0; step < damage2; step++) {
+            document.getElementById('1-health-'+currentHealth).classList.add("red");
+            currentHealth = parseInt(currentHealth);
+            currentHealth = currentHealth - 1;
+            currentHealth = currentHealth.toString();
+          };
+          healthQuery.innerText = currentHealth;
+        }, 1500);
+      }
+      else if (pokemon1.spd < pokemon2.spd) {
+        setTimeout(() => {
+          var damage2 = damages(pokemon2, pokemon1, chosenMove2);
+          for (let step = 0; step < damage2; step++) {
+            document.getElementById('1-health-'+currentHealth).classList.add("red");
+            currentHealth = parseInt(currentHealth);
+            currentHealth = currentHealth - 1;
+            currentHealth = currentHealth.toString();
+          };
+          healthQuery.innerText = currentHealth;
+        }, 0);
 
-      setTimeout(() => {
-        var damage = damages(pokemon1, pokemon2, playerMove);
-        for (let step = 0; step < damage; step++) {
-          document.getElementById('2-health-'+currentHealth2).classList.add("red");
-          currentHealth2 = parseInt(currentHealth2);
-          currentHealth2 = currentHealth2 - 1;
-          currentHealth2 = currentHealth2.toString();
-        };
-      }, 1500);
+        setTimeout(() => {
+          var damage = damages(pokemon1, pokemon2, playerMove);
+          for (let step = 0; step < damage; step++) {
+            document.getElementById('2-health-'+currentHealth2).classList.add("red");
+            currentHealth2 = parseInt(currentHealth2);
+            currentHealth2 = currentHealth2 - 1;
+            currentHealth2 = currentHealth2.toString();
+          };
+        }, 1500);
+      };
     };
 
     setTimeout(() => {
-      const description = document.getElementById('description');
-      description.innerText = "";
-      let descriptionText = document.createElement('p');
-      descriptionText.innerText = `What will ${pokemon1.name} do?`
-      description.append(descriptionText);
+      battleDialogue(currentHealth, currentHealth2, pokemon1, pokemon2);
     }, 3500);
   });
-}
+};
 
 export { healthBar };
