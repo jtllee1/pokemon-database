@@ -37,7 +37,7 @@ class PagesController < ApplicationController
   end
 
   def pokemon_two
-    @pokemon_2 = Pokemon.find_by(name: "Gyarados")
+    @pokemon_2 = Pokemon.find_by(name: "Mewtwo")
     @move_1_2 = Move.find_by(name: "Psychic")
     @move_2_2 = Move.find_by(name: "Hyper-beam")
     @move_3_2 = Move.find_by(name: "Swift")
