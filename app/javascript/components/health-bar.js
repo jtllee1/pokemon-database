@@ -15,6 +15,12 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
 
   const execute = document.getElementById("a-button");
 
+  let recharge1 = 0;
+  let recharge2 = 0;
+
+  const description = document.getElementById('description');
+  let descriptionText = document.createElement('p');
+
   execute.addEventListener('click', () => {
     var chosenMove = document.querySelector(".active").id;
     var chosenMove2 = enemyMoves[Math.floor(Math.random()*enemyMoves.length)];
@@ -32,9 +38,13 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
       var playerMove = aMove4;
     };
 
+
     if (pokemon1.spd > pokemon2.spd) {
       setTimeout(() => {
-        if (currentHealth > 0) {
+        if (currentHealth > 0 && recharge1 == 0) {
+          if (playerMove["name"] == "Hyper-beam") {
+            recharge1 = 1;
+          };
           var damage = damages(pokemon1, pokemon2, playerMove);
           for (let step = 0; step < damage; step++) {
             document.getElementById('2-health-'+currentHealth2).classList.add("red");
@@ -42,11 +52,18 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
             currentHealth2 = currentHealth2 - 1;
             currentHealth2 = currentHealth2.toString();
           };
+        }
+        else if (recharge1 == 1) {
+          recharge1 = 0;
+          description.innerText = `${pokemon1.name} is recharging!`
         };
       }, 0);
 
       setTimeout(() => {
-        if (currentHealth2 > 0) {
+        if (currentHealth2 > 0 && recharge2 == 0) {
+          if (chosenMove2["name"] == "Hyper-beam") {
+            recharge2 = 1;
+          };
           var damage2 = damages(pokemon2, pokemon1, chosenMove2);
           for (let step = 0; step < damage2; step++) {
             document.getElementById('1-health-'+currentHealth).classList.add("red");
@@ -55,12 +72,19 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
             currentHealth = currentHealth.toString();
           };
           healthQuery.innerText = currentHealth;
+        }
+        else if (recharge2 == 1) {
+          recharge2 = 0;
+          description.innerText = `${pokemon2.name} is recharging!`
         };
       }, 1500);
     }
     else if (pokemon1.spd < pokemon2.spd) {
       setTimeout(() => {
-        if (currentHealth2 > 0) {
+        if (currentHealth2 > 0 && recharge2 == 0) {
+          if (chosenMove2["name"] == "Hyper-beam") {
+            recharge2 = 1;
+          };
           var damage2 = damages(pokemon2, pokemon1, chosenMove2);
           for (let step = 0; step < damage2; step++) {
             document.getElementById('1-health-'+currentHealth).classList.add("red");
@@ -69,11 +93,18 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
             currentHealth = currentHealth.toString();
           };
           healthQuery.innerText = currentHealth;
+        }
+        else if (recharge2 == 1) {
+          recharge2 = 0;
+          description.innerText = `${pokemon2.name} is recharging!`
         };
       }, 0);
 
       setTimeout(() => {
-        if (currentHealth > 0) {
+        if (currentHealth > 0 && recharge1 == 0) {
+          if (playerMove["name"] == "Hyper-beam") {
+            recharge1 = 1;
+          };
           var damage = damages(pokemon1, pokemon2, playerMove);
           for (let step = 0; step < damage; step++) {
             document.getElementById('2-health-'+currentHealth2).classList.add("red");
@@ -81,6 +112,10 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
             currentHealth2 = currentHealth2 - 1;
             currentHealth2 = currentHealth2.toString();
           };
+        }
+        else if (recharge1 == 1) {
+          recharge1 = 0;
+          description.innerText = `${pokemon1.name} is recharging!`
         };
       }, 1500);
     };
