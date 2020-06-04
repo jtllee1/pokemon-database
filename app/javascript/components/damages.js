@@ -16,7 +16,6 @@ const damages = (pokemon1, pokemon2, move) => {
   let critCheck = Math.random() * 100;
 
   const description = document.getElementById('description');
-  let descriptionText = document.createElement('p');
 
   let typeDamage1 = typeAdvantage(move["type"], pokemon1["type-1"]);
   let typeDamage2 = typeAdvantage(move["type"], pokemon1["type-2"]);
