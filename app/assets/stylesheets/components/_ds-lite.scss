@@ -1,3 +1,26 @@
+#ds-lite-closed {
+  background-image: url(DSLITE_closed.png);
+  background-repeat: no-repeat;
+  background-size: 900px 900px;
+  margin: 0 auto;
+  margin-top: 80px;
+  width: 900px;
+  height: 900px;
+  position: relative;
+}
+
+#ds-selectable-area-open {
+  position: absolute;
+  bottom: 46px;
+  left: 62px;
+  width: 770px;
+  height: 435px;
+}
+
+#ds-selectable-area-open:hover {
+  cursor: pointer;
+}
+
 #ds-lite {
   background-image: url(DSLITE_open_on.png);
   background-repeat: no-repeat;
@@ -7,6 +30,19 @@
   width: 900px;
   height: 900px;
   position: relative;
+}
+
+#ds-selectable-area-close {
+  position: absolute;
+  top: 60px;
+  right: 62px;
+  width: 180px;
+  height: 100px;
+  z-index: 1;
+}
+
+#ds-selectable-area-close:hover {
+  cursor: pointer;
 }
 
 #ds-lite-overlay {
