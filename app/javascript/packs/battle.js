@@ -1,3 +1,4 @@
+import { dsOpenClose } from '../components/ds-open-close';
 import { pokemonCreate } from '../components/pokemon-create';
 import { moveCreate } from '../components/move-create';
 import { healthBar } from '../components/health-bar';
@@ -14,7 +15,7 @@ const bMove2 = {};
 const bMove3 = {};
 const bMove4 = {};
 
-
+dsOpenClose();
 pokemonCreate(pokemon1, pokemon2);
 moveCreate(aMove1, aMove2, aMove3, aMove4, bMove1, bMove2, bMove3, bMove4)
 healthBar(pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, bMove2, bMove3, bMove4);
