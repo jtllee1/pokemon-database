@@ -16,6 +16,7 @@ class PagesController < ApplicationController
 
   def find_pokemons
     @pokemons = Pokemon.all
+    @pokemons = @pokemons.sort_by{:number}
   end
 
   def find_moves
