@@ -17,10 +17,8 @@
             <div class="dex-entry">
               <div class="screen-left">
                 <h5>#<%= pokemon.number %> <%= pokemon.name %></h5>
-                <%= link_to pokemon_path(pokemon) do %>
-                  <img src="<%= pokemon.image %>" class="image-1" alt="Pokemon Image">
-                  <img src="<%= pokemon.sprite_front %>" class ="image-2 invisible" alt="Pokemon Image">
-                <% end %>
+                <img src="<%= pokemon.image %>" class="image-1" alt="Pokemon Image">
+                <img src="<%= pokemon.sprite_front %>" class ="image-2 invisible" alt="Pokemon Image">
               </div>
               <div class="screen-right">
                 <div class="typing">
