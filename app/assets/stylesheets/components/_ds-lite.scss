@@ -1,5 +1,5 @@
 #ds-lite-closed {
-  background-image: url(DSLITE_closed.png);
+  background-image: image-url('DSLITE_closed.png');
   background-repeat: no-repeat;
   background-size: 900px 900px;
   margin: 0 auto;
@@ -21,7 +21,7 @@
 }
 
 #ds-lite {
-  background-image: url(DSLITE_open_on.png);
+  background-image: image-url('DSLITE_open_on.png');
   background-repeat: no-repeat;
   background-size: 900px 900px;
   margin: 0 auto;
@@ -170,61 +170,61 @@
 }
 
 #up-control:active ~ #ds-lite-overlay {
-  background-image: url(DSLITE_open_on_up.png);
+  background-image: image-url('DSLITE_open_on_up.png');
   background-repeat: no-repeat;
   background-size: 900px 900px;
 }
 
 #right-control:active ~ #ds-lite-overlay {
-  background-image: url(DSLITE_open_on_right.png);
+  background-image: image-url('DSLITE_open_on_right.png');
   background-repeat: no-repeat;
   background-size: 900px 900px;
 }
 
 #left-control:active ~ #ds-lite-overlay {
-  background-image: url(DSLITE_open_on_left.png);
+  background-image: image-url('DSLITE_open_on_left.png');
   background-repeat: no-repeat;
   background-size: 900px 900px;
 }
 
 #down-control:active ~ #ds-lite-overlay {
-  background-image: url(DSLITE_open_on_down.png);
+  background-image: image-url('DSLITE_open_on_down.png');
   background-repeat: no-repeat;
   background-size: 900px 900px;
 }
 
 #a-button:active ~ #ds-lite-overlay {
-  background-image: url(DSLITE_open_on_A.png);
+  background-image: image-url('DSLITE_open_on_A.png');
   background-repeat: no-repeat;
   background-size: 900px 900px;
 }
 
 #b-button:active ~ #ds-lite-overlay {
-  background-image: url(DSLITE_open_on_B.png);
+  background-image: image-url('DSLITE_open_on_B.png');
   background-repeat: no-repeat;
   background-size: 900px 900px;
 }
 
 #x-button:active ~ #ds-lite-overlay {
-  background-image: url(DSLITE_open_on_X.png);
+  background-image: image-url('DSLITE_open_on_X.png');
   background-repeat: no-repeat;
   background-size: 900px 900px;
 }
 
 #y-button:active ~ #ds-lite-overlay {
-  background-image: url(DSLITE_open_on_Y.png);
+  background-image: image-url('DSLITE_open_on_Y.png');
   background-repeat: no-repeat;
   background-size: 900px 900px;
 }
 
 #start-button:active ~ #ds-lite-overlay {
-  background-image: url(DSLITE_open_on_start.png);
+  background-image: image-url('DSLITE_open_on_start.png');
   background-repeat: no-repeat;
   background-size: 900px 900px;
 }
 
 #select-button:active ~ #ds-lite-overlay {
-  background-image: url(DSLITE_open_on_select.png);
+  background-image: image-url('DSLITE_open_on_select.png');
   background-repeat: no-repeat;
   background-size: 900px 900px;
 }
