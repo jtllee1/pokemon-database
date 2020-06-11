@@ -1,6 +1,13 @@
 .navbar {
   justify-content: space-between;
   background: #15243ed9;
+  color: white;
+  a {
+    color: #c1cee6;
+  }
+  a:hover {
+    color: white;
+  }
 }
 
 .navbar .navbar-collapse {
