@@ -1,5 +1,5 @@
 #pokedex-closed {
-  background-image: url(pokedex-closed.png);
+  background-image: image-url('pokedex-closed.png');
   margin: 0 auto;
   margin-top: 80px;
   width: 978px;
@@ -30,7 +30,7 @@
 }
 
 #pokedex {
-  background-image: url(pokedex-neutral.png);
+  background-image: image-url('pokedex-neutral.png');
   margin: 0 auto;
   margin-top: 80px;
   width: 978px;
@@ -164,27 +164,27 @@
 }
 
 #circle-button:active ~ #pokedex-overlay {
-  background-image: url(pokedex-circlepressed.png);
+  background-image: image-url('pokedex-circlepressed.png');
 }
 
 #red-button:active ~ #pokedex-overlay {
-  background-image: url(pokedex-redpressed.png);
+  background-image: image-url('pokedex-redpressed.png');
 }
 
 #up:active ~ #pokedex-overlay {
-  background-image: url(pokedex-uppressed.png);
+  background-image: image-url('pokedex-uppressed.png');
 }
 
 #left:active ~ #pokedex-overlay {
-  background-image: url(pokedex-leftpressed.png);
+  background-image: image-url('pokedex-leftpressed.png');
 }
 
 #right:active ~ #pokedex-overlay {
-  background-image: url(pokedex-rightpressed.png);
+  background-image: image-url('pokedex-rightpressed.png');
 }
 
 #down:active ~ #pokedex-overlay {
-  background-image: url(pokedex-downpressed.png);
+  background-image: image-url('pokedex-downpressed.png');
 }
 
 #circle-button:hover{
