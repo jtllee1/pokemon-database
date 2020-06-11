@@ -85,9 +85,9 @@ end
   puts @image = "https://pokeres.bastionbot.org/images/pokemon/#{@number}.png"
   puts @hp = @pokemon['stats'][0]['base_stat']
   puts @attack = @pokemon['stats'][1]['base_stat']
-  puts @defence = @pokemon['stats'][2]['base_stat']
+  puts @defense = @pokemon['stats'][2]['base_stat']
   puts @special_attack = @pokemon['stats'][3]['base_stat']
-  puts @special_defence = @pokemon['stats'][4]['base_stat']
+  puts @special_defense = @pokemon['stats'][4]['base_stat']
   puts @speed = @pokemon['stats'][5]['base_stat']
 
   @types = []
