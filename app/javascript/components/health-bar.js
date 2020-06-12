@@ -139,6 +139,9 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
     };
 
     setTimeout(() => {
+      if (currentHealth <= 0) {
+        healthQuery.innerText = 0;
+      }
       battleDialogue(currentHealth, currentHealth2, pokemon1, pokemon2);
     }, 3500);
   });
