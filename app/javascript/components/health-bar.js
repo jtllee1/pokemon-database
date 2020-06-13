@@ -74,7 +74,7 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
         setTimeout(() => {
           if (currentHealth2 > 0 && recharge2 == 0) {
             var damage2 = damages(pokemon2, pokemon1, chosenMove2);
-            if (chosenMove2["name"] == "Hyper-beam" && damage > 0) {
+            if (chosenMove2["name"] == "Hyper-beam" && damage2 > 0) {
               recharge2 = 1;
             };
             for (let step = 0; step < damage2; step++) {
@@ -97,7 +97,7 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
         setTimeout(() => {
           if (currentHealth2 > 0 && recharge2 == 0) {
             var damage2 = damages(pokemon2, pokemon1, chosenMove2);
-            if (chosenMove2["name"] == "Hyper-beam" && damage > 0) {
+            if (chosenMove2["name"] == "Hyper-beam" && damage2 > 0) {
               recharge2 = 1;
             };
             for (let step = 0; step < damage2; step++) {
