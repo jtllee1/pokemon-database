@@ -55,10 +55,12 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
             };
             var damage = damages(pokemon1, pokemon2, playerMove);
             for (let step = 0; step < damage; step++) {
-              document.getElementById('2-health-'+currentHealth2).classList.add("red");
-              currentHealth2 = parseInt(currentHealth2);
-              currentHealth2 = currentHealth2 - 1;
-              currentHealth2 = currentHealth2.toString();
+              setTimeout( function timer(){
+                  document.getElementById('2-health-'+currentHealth2).classList.add("red");
+                  currentHealth2 = parseInt(currentHealth2);
+                  currentHealth2 = currentHealth2 - 1;
+                  currentHealth2 = currentHealth2.toString();
+                }, step * 2 );
             };
             ppRemaining = ppRemaining - 1;
             pp.innerText = `${ppRemaining}`;
@@ -76,12 +78,14 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
             };
             var damage2 = damages(pokemon2, pokemon1, chosenMove2);
             for (let step = 0; step < damage2; step++) {
-              document.getElementById('1-health-'+currentHealth).classList.add("red");
-              currentHealth = parseInt(currentHealth);
-              currentHealth = currentHealth - 1;
-              currentHealth = currentHealth.toString();
+              setTimeout( function timer(){
+                document.getElementById('1-health-'+currentHealth).classList.add("red");
+                currentHealth = parseInt(currentHealth);
+                currentHealth = currentHealth - 1;
+                currentHealth = currentHealth.toString();
+                healthQuery.innerText = currentHealth;
+              }, step * 2 );
             };
-            healthQuery.innerText = currentHealth;
           }
           else if (recharge2 == 1) {
             recharge2 = 0;
@@ -97,12 +101,14 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
             };
             var damage2 = damages(pokemon2, pokemon1, chosenMove2);
             for (let step = 0; step < damage2; step++) {
-              document.getElementById('1-health-'+currentHealth).classList.add("red");
-              currentHealth = parseInt(currentHealth);
-              currentHealth = currentHealth - 1;
-              currentHealth = currentHealth.toString();
+              setTimeout( function timer(){
+                document.getElementById('1-health-'+currentHealth).classList.add("red");
+                currentHealth = parseInt(currentHealth);
+                currentHealth = currentHealth - 1;
+                currentHealth = currentHealth.toString();
+                healthQuery.innerText = currentHealth;
+              }, step * 2 );
             };
-            healthQuery.innerText = currentHealth;
           }
           else if (recharge2 == 1) {
             recharge2 = 0;
@@ -118,10 +124,12 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
               };
               var damage = damages(pokemon1, pokemon2, playerMove);
               for (let step = 0; step < damage; step++) {
-                document.getElementById('2-health-'+currentHealth2).classList.add("red");
-                currentHealth2 = parseInt(currentHealth2);
-                currentHealth2 = currentHealth2 - 1;
-                currentHealth2 = currentHealth2.toString();
+                setTimeout( function timer(){
+                  document.getElementById('2-health-'+currentHealth2).classList.add("red");
+                  currentHealth2 = parseInt(currentHealth2);
+                  currentHealth2 = currentHealth2 - 1;
+                  currentHealth2 = currentHealth2.toString();
+                }, step * 2 );
               };
               ppRemaining = ppRemaining - 1;
               pp.innerText = `${ppRemaining}`;
