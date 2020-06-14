@@ -83,12 +83,12 @@ end
   puts @sprite_back = @pokemon['sprites']['back_default']
   puts @sprite_front = @pokemon['sprites']['front_default']
   puts @image = "https://pokeres.bastionbot.org/images/pokemon/#{@number}.png"
-  puts @speed = @pokemon['stats'][0]['base_stat']
-  puts @special_defense = @pokemon['stats'][1]['base_stat']
-  puts @special_attack = @pokemon['stats'][2]['base_stat']
-  puts @defense = @pokemon['stats'][3]['base_stat']
-  puts @attack = @pokemon['stats'][4]['base_stat']
-  puts @hp = @pokemon['stats'][5]['base_stat']
+  puts @hp = @pokemon['stats'][0]['base_stat']
+  puts @attack = @pokemon['stats'][1]['base_stat']
+  puts @defense = @pokemon['stats'][2]['base_stat']
+  puts @special_attack = @pokemon['stats'][3]['base_stat']
+  puts @special_defense = @pokemon['stats'][4]['base_stat']
+  puts @speed = @pokemon['stats'][5]['base_stat']
 
   @types = []
   @pokemon['types'].each do |type|

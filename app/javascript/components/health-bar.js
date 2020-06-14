@@ -50,10 +50,10 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
       if (pokemon1.spd > pokemon2.spd) {
         setTimeout(() => {
           if (currentHealth > 0 && currentHealth2 > 0 && recharge1 == 0) {
-            if (playerMove["name"] == "Hyper-beam") {
+            var damage = damages(pokemon1, pokemon2, playerMove);
+            if (playerMove["name"] == "Hyper-beam" && damage > 0) {
               recharge1 = 1;
             };
-            var damage = damages(pokemon1, pokemon2, playerMove);
             for (let step = 0; step < damage; step++) {
               setTimeout( function timer(){
                   document.getElementById('2-health-'+currentHealth2).classList.add("red");
@@ -73,10 +73,10 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
 
         setTimeout(() => {
           if (currentHealth2 > 0 && currentHealth > 0 && recharge2 == 0) {
-            if (chosenMove2["name"] == "Hyper-beam") {
+            var damage2 = damages(pokemon2, pokemon1, chosenMove2);
+            if (chosenMove2["name"] == "Hyper-beam" && damage2 > 0) {
               recharge2 = 1;
             };
-            var damage2 = damages(pokemon2, pokemon1, chosenMove2);
             for (let step = 0; step < damage2; step++) {
               setTimeout( function timer(){
                 document.getElementById('1-health-'+currentHealth).classList.add("red");
@@ -96,10 +96,10 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
       else if (pokemon1.spd < pokemon2.spd) {
         setTimeout(() => {
           if (currentHealth2 > 0 && currentHealth > 0 && recharge2 == 0) {
-            if (chosenMove2["name"] == "Hyper-beam") {
+            var damage2 = damages(pokemon2, pokemon1, chosenMove2);
+            if (chosenMove2["name"] == "Hyper-beam" && damage2 > 0) {
               recharge2 = 1;
             };
-            var damage2 = damages(pokemon2, pokemon1, chosenMove2);
             for (let step = 0; step < damage2; step++) {
               setTimeout( function timer(){
                 document.getElementById('1-health-'+currentHealth).classList.add("red");
@@ -119,10 +119,10 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
         setTimeout(() => {
           if (ppRemaining >= 0) {
             if (currentHealth > 0 && currentHealth2 > 0 && recharge1 == 0) {
-              if (playerMove["name"] == "Hyper-beam") {
+              var damage = damages(pokemon1, pokemon2, playerMove);
+              if (playerMove["name"] == "Hyper-beam" && damage > 0) {
                 recharge1 = 1;
               };
-              var damage = damages(pokemon1, pokemon2, playerMove);
               for (let step = 0; step < damage; step++) {
                 setTimeout( function timer(){
                   document.getElementById('2-health-'+currentHealth2).classList.add("red");
