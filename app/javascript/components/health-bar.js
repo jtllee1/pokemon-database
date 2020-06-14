@@ -49,7 +49,7 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
     if (ppRemaining > 0) {
       if (pokemon1.spd > pokemon2.spd) {
         setTimeout(() => {
-          if (currentHealth > 0 && recharge1 == 0) {
+          if (currentHealth > 0 && currentHealth2 > 0 && recharge1 == 0) {
             if (playerMove["name"] == "Hyper-beam") {
               recharge1 = 1;
             };
@@ -65,14 +65,14 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
             ppRemaining = ppRemaining - 1;
             pp.innerText = `${ppRemaining}`;
           }
-          else if (recharge1 == 1) {
+          else if (currentHealth > 0 && currentHealth2 > 0 && recharge1 == 1) {
             recharge1 = 0;
             description.innerText = `${pokemon1.name} is recharging!`
           };
         }, 0);
 
         setTimeout(() => {
-          if (currentHealth2 > 0 && recharge2 == 0) {
+          if (currentHealth2 > 0 && currentHealth > 0 && recharge2 == 0) {
             if (chosenMove2["name"] == "Hyper-beam") {
               recharge2 = 1;
             };
@@ -87,7 +87,7 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
               }, step * 2 );
             };
           }
-          else if (recharge2 == 1) {
+          else if (currentHealth > 0 && currentHealth2 > 0 && recharge2 == 1) {
             recharge2 = 0;
             description.innerText = `${pokemon2.name} is recharging!`
           };
@@ -95,7 +95,7 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
       }
       else if (pokemon1.spd < pokemon2.spd) {
         setTimeout(() => {
-          if (currentHealth2 > 0 && recharge2 == 0) {
+          if (currentHealth2 > 0 && currentHealth > 0 && recharge2 == 0) {
             if (chosenMove2["name"] == "Hyper-beam") {
               recharge2 = 1;
             };
@@ -110,7 +110,7 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
               }, step * 2 );
             };
           }
-          else if (recharge2 == 1) {
+          else if (currentHealth > 0 && currentHealth2 > 0 && recharge2 == 1) {
             recharge2 = 0;
             description.innerText = `${pokemon2.name} is recharging!`
           };
@@ -118,7 +118,7 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
 
         setTimeout(() => {
           if (ppRemaining >= 0) {
-            if (currentHealth > 0 && recharge1 == 0) {
+            if (currentHealth > 0 && currentHealth2 > 0 && recharge1 == 0) {
               if (playerMove["name"] == "Hyper-beam") {
                 recharge1 = 1;
               };
@@ -134,7 +134,7 @@ const healthBar = (pokemon1, pokemon2, aMove1, aMove2, aMove3, aMove4, bMove1, b
               ppRemaining = ppRemaining - 1;
               pp.innerText = `${ppRemaining}`;
             }
-            else if (recharge1 == 1) {
+            else if (currentHealth > 0 && currentHealth2 > 0 && recharge1 == 1) {
               recharge1 = 0;
               description.innerText = `${pokemon1.name} is recharging!`
             };
