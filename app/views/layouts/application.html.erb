@@ -14,6 +14,29 @@
     <%= render 'shared/flashes' %>
     <%= yield %>
 
+    <div id="preload">
+      <%= image_tag "pokedex-circlepressed", alt: "" %>
+      <%= image_tag "pokedex-closed", alt: "" %>
+      <%= image_tag "pokedex-downpressed", alt: "" %>
+      <%= image_tag "pokedex-leftpressed", alt: "" %>
+      <%= image_tag "pokedex-neutral", alt: "" %>
+      <%= image_tag "pokedex-redpressed", alt: "" %>
+      <%= image_tag "pokedex-rightpressed", alt: "" %>
+      <%= image_tag "pokedex-uppressed", alt: "" %>
+      <%= image_tag "DSLITE_closed", alt: "" %>
+      <%= image_tag "DSLITE_open_on", alt: "" %>
+      <%= image_tag "DSLITE_open_on_A", alt: "" %>
+      <%= image_tag "DSLITE_open_on_B", alt: "" %>
+      <%= image_tag "DSLITE_open_on_down", alt: "" %>
+      <%= image_tag "DSLITE_open_on_left", alt: "" %>
+      <%= image_tag "DSLITE_open_on_right", alt: "" %>
+      <%= image_tag "DSLITE_open_on_up", alt: "" %>
+      <%= image_tag "DSLITE_open_on_X", alt: "" %>
+      <%= image_tag "DSLITE_open_on_Y", alt: "" %>
+      <%= image_tag "DSLITE_open_on_select", alt: "" %>
+      <%= image_tag "DSLITE_open_on_start", alt: "" %>
+    </div>
+
     <%= javascript_pack_tag 'application' %>
   </body>
 </html>
